@@ -4,20 +4,17 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-const MediaCard = () => {
+const MediaCard = ({imageUrl}) => {
     return (
-        <Card sx={{ minWidth: 400 }}>
+        <Card sx={{ minWidth: 400, maxWidth: 500 }}>
             <CardMedia
                 sx={{ height: 300 }}
-                image="https://cdn2.thedogapi.com/images/WIf5o1E8h.jpg"
+                image={imageUrl}
                 title="animal picture"
             />
             <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                    A title
-                </Typography>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    some text below here
+                <Typography gutterBottom={false} variant="h5" component="div">
+                    Isn't it nice ?
                 </Typography>
             </CardContent>
         </Card>
