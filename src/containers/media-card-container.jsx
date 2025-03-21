@@ -1,8 +1,9 @@
 import {useContext, useEffect, useState} from "react";
 import MediaCard from "../components/media-card.jsx";
-import {Box, Button, Stack, useMediaQuery, useTheme} from "@mui/material";
+import {Box, Stack, useMediaQuery, useTheme} from "@mui/material";
 import {fetchData} from "../util/http.js";
 import {QuestionContext} from "../store/question-context.jsx";
+import Button from "../components/Button.jsx";
 
 const MediaCardContainer = () => {
     const theme = useTheme();
@@ -30,7 +31,7 @@ const MediaCardContainer = () => {
                  my={2}>
                 <Stack spacing={2} direction="column">
                     <MediaCard imageUrl={animalPhoto.url}/>
-                    <Button variant="contained" color="primary" fullWidth={isMobile} onClick={handleClickShowAnother}>
+                    <Button variant="contained" fullWidth={isMobile} onClick={handleClickShowAnother} color="primary">
                         Show another one
                     </Button>
                 </Stack>
