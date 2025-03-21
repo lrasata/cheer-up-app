@@ -1,7 +1,7 @@
 import {Box, Stack, Typography, useMediaQuery, useTheme} from "@mui/material";
 import {QuestionContext} from "../store/question-context.jsx";
 import {useContext} from "react";
-import Button from "./Button.jsx";
+import Button from "./button.jsx";
 
 const Question = () => {
     const theme = useTheme();

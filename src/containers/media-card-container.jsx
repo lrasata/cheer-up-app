@@ -3,7 +3,7 @@ import MediaCard from "../components/media-card.jsx";
 import {Box, Stack, useMediaQuery, useTheme} from "@mui/material";
 import {fetchData} from "../util/http.js";
 import {QuestionContext} from "../store/question-context.jsx";
-import Button from "../components/Button.jsx";
+import Button from "../components/button.jsx";
 
 const MediaCardContainer = () => {
     const theme = useTheme();
