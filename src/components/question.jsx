@@ -1,13 +1,22 @@
 import {Box, Button, Stack, Typography, useMediaQuery, useTheme} from "@mui/material";
+import {QuestionContext} from "../store/question-context.jsx";
+import {useContext} from "react";
 
 const Question = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+    const { updateCategory} = useContext(QuestionContext);
+
+    const handleClick = (category) => {
+        updateCategory(category);
+    }
 
     const buttons = <>
-        <Button variant="outlined" fullWidth={isMobile}>I'm a cat person</Button>
-        <Button variant="outlined" fullWidth={isMobile}>I'm a dog person</Button>
+        <Button variant="outlined" fullWidth={isMobile} onClick={() => handleClick('cat')}>I'm a cat person</Button>
+        <Button variant="outlined" fullWidth={isMobile} onClick={() => handleClick('dog')}>I'm a dog person</Button>
     </>
+
+
 
     return <>
         <Typography variant="body1" color="textPrimary">
