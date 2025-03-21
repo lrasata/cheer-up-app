@@ -1,9 +1,9 @@
 export const fetchData = async (setFunc, category) => {
-    const dogApiUrl = 'https://api.thedogapi.com/v1/images/search';
-    const dopAPIkey = 'live_lTT8GmkQmDyGf5GTeMD0auFAMY0ik1jrmfZfTLv2chAoOkTgOk08koib0iIxpbi9';
+    const dogApiUrl = import.meta.env.VITE_DOG_API_URL;
+    const dopAPIkey = import.meta.env.VITE_DOG_API_KEY;
 
-    const catAPiUrl = 'https://api.thecatapi.com/v1/images/search';
-    const catApiKey = 'live_ZroI67pbPSnzAeCslCpYM9PhVlQfsITv19Kp5wkgP883LF2lbUGk5YxrNuvZ4oWM'
+    const catAPiUrl = import.meta.env.VITE_CAT_API_URL;
+    const catApiKey = import.meta.env.VITE_CAT_API_KEY;
 
     const url = category === 'dog' ? dogApiUrl : catAPiUrl;
     const key = category === 'dog' ? dopAPIkey : catApiKey;
