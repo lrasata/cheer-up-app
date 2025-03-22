@@ -8,7 +8,7 @@ The main purpose for this project is to quickly build a small and simple react a
 ![cheer-up-app-image](/docs/cheer-up.png)
 
 ## Prerequisites
-To run this app you will need to get your FREE API keys from by [TheCatAPI](https://thecatapi.com/) and [TheDogAPI](https://thedogapi.com/) which have to be provided in the `.env`
+To run this app you may need to get your FREE API keys from [TheCatAPI](https://thecatapi.com/) and [TheDogAPI](https://thedogapi.com/) which have to be provided in the `.env`
 
 ```
 VITE_DOG_API_URL=https://api.thedogapi.com/v1/images/search
@@ -33,3 +33,6 @@ To Start Server:
 To Visit App:
 
 `http://localhost:5173/`
+
+## Deployment
+AWS amplify packages has been installed in this project for testing purposes
