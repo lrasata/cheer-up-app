@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 *.iml
 .vite
+
+# amplify
+.amplify
+amplify_outputs*
+amplifyconfiguration*
