@@ -3,10 +3,14 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import {useMediaQuery, useTheme} from "@mui/material";
 
 const MediaCard = ({imageUrl}) => {
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
     return (
-        <Card sx={{ minWidth: 320, maxWidth: 400 }}>
+        <Card sx={{minWidth: 300, maxWidth: 400 }}>
             <CardMedia
                 sx={{ height: 300 }}
                 image={imageUrl}
