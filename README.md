@@ -5,6 +5,8 @@ It used APIs provided by [TheCatAPI](https://thecatapi.com/) and [TheDogAPI](htt
 
 The main purpose for this project is to quickly build a small and simple react app which can be used for deployment training.
 
+![cheer-up-app-image](/docs/cheer-up.png)
+
 ## Prerequisites
 To run this app you will need to get your FREE API keys from by [TheCatAPI](https://thecatapi.com/) and [TheDogAPI](https://thedogapi.com/) which have to be provided in the `.env`
 
