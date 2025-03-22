@@ -1,12 +1,33 @@
-# React + Vite
+# Cheer-up is a React + Vite web application
+This is a small and simple web application which randomly shows a very cute picture of a cat or dog to cheer you up.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It used APIs provided by [TheCatAPI](https://thecatapi.com/) and [TheDogAPI](https://thedogapi.com/)
 
-Currently, two official plugins are available:
+The main purpose for this project is to quickly build a small and simple react app which can be used for deployment training.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
+To run this app you will need to get your FREE API keys from by [TheCatAPI](https://thecatapi.com/) and [TheDogAPI](https://thedogapi.com/) which have to be provided in the `.env`
 
-## Expanding the ESLint configuration
+```
+VITE_DOG_API_URL=https://api.thedogapi.com/v1/images/search
+VITE_DOG_API_KEY=your_dog_api_key
+VITE_CAT_API_URL=https://api.thecatapi.com/v1/images/search
+VITE_CAT_API_KEY=your_cat_api_key
+```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation and Setup Instructions
+
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.
+
+Installation:
+
+`npm install`
+
+
+To Start Server:
+
+`npm run dev`
+
+To Visit App:
+
+`http://localhost:5173/`

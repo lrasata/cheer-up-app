@@ -1,5 +1,6 @@
 {
   "name": "cheer-up-app",
+  "author": "lrasata",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -27,5 +28,6 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
-  }
+  },
+  "license": "MIT"
 }
