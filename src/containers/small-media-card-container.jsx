@@ -5,12 +5,17 @@ import {AppContext} from "../store/app-context.jsx";
 
 
 const SmallMediaCardContainer = () => {
-    const {loadedImages} = useContext(AppContext);
+    const {loadedImages, updateDisplayedImage, updateRunFetching } = useContext(AppContext);
 
     // do not display the first image, it is already displayed in another section
     let loadedImagesToShow = [];
     if (loadedImages.length > 0) {
         loadedImagesToShow = loadedImages.slice(1);
+    }
+
+    const handleOnClick = (image) => {
+        updateDisplayedImage(image);
+        updateRunFetching(false)
     }
 
     return (
@@ -19,7 +24,7 @@ const SmallMediaCardContainer = () => {
                 loadedImagesToShow.length > 0 && <Grid container spacing={2}>
                     {loadedImagesToShow.map((image) => (
                         <Grid size={{xs: 12, md: 4}} key={image.imageId}>
-                            <SmallMediaCard imageUrl={image.imageUrl}/>
+                            <SmallMediaCard imageUrl={image.imageUrl} callBackFunc={() => handleOnClick(image)} />
                         </Grid>
                     ))}
                 </Grid>

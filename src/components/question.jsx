@@ -6,10 +6,11 @@ import Button from "./button.jsx";
 const Question = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const { updateCategory} = useContext(AppContext);
+    const { updateCategory, updateRunFetching} = useContext(AppContext);
 
     const handleClick = (category) => {
         updateCategory(category);
+        updateRunFetching(true)
     }
 
     const buttons = <>
@@ -24,9 +25,11 @@ const Question = () => {
             Would you rather prefer cats or dogs ?
         </Typography>
         {isMobile ?
-            <>
-            { buttons}
-            </> :
+            <Box my={2}>
+                <Stack spacing={2} direction="column">
+                    {buttons}
+                </Stack>
+            </Box> :
             <Box display="flex"
                  justifyContent="center"
                  alignItems="center"

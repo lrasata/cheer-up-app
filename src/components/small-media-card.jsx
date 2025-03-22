@@ -9,15 +9,13 @@ const SmallMediaCard = ({imageUrl, callBackFunc}) => {
         <Card sx={{ display: 'flex' }}>
             <CardMedia
                 component="img"
-                sx={{ width: 151 }}
+                sx={{ height: 100, width: 151 }}
                 image={imageUrl}
                 alt="image of an animal"
             />
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center',  margin: 'auto' }}>
                     <Button variant='text' color='primary' onClick={callBackFunc}>View again</Button>
                 </Box>
-            </Box>
 
         </Card>
     );

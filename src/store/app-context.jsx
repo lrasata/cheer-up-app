@@ -12,9 +12,31 @@ export const AppContext = createContext({
     updateCategory: () => {},
     loadedImages: [],
     addImage: () => {},
+    displayedImage: {},
+    updateDisplayedImage: () => {},
+    runFetching: true,
+    updateRunFetching: () => {},
 });
 
 export const appReducer = (state, action) => {
+    if (action.type === 'UPDATE_RUN_FETCHING') {
+        return {
+            ...state,
+            runFetching: action.payload.runFetching
+        };
+    }
+    if (action.type === 'UPDATE_DISPLAYED_IMAGE') {
+        console.log(action.payload);
+        return {
+            ...state,
+            category: action.payload.category,
+            displayedImage: {
+                imageUrl: action.payload.imageUrl,
+                imageId: action.payload.imageId,
+                category: action.payload.category,
+            },
+        };
+    }
     if (action.type === 'UPDATE_CATEGORY') {
         return {
             ...state,
@@ -22,7 +44,6 @@ export const appReducer = (state, action) => {
         };
     }
     if (action.type === 'ADD_IMAGE') {
-        console.log(action.payload)
         const imageToAdd = {
             category: action.payload.category,
             imageId: action.payload.imageId,
@@ -30,7 +51,6 @@ export const appReducer = (state, action) => {
         }
 
         const updatedList = [imageToAdd, ...state.loadedImages ];
-        console.log('updatedList', updatedList);
 
         if (state.loadedImages.length === MAX_COUNT_SAVED_IMAGES) {
             // avoid the length of the array to be more than 4
@@ -51,6 +71,7 @@ export default function AppContextProvider({ children }) {
         {
             category: '',
             loadedImages: [],
+            displayedImage: {}
         }
     );
 
@@ -74,11 +95,35 @@ export default function AppContextProvider({ children }) {
         });
     }
 
+    const handleDisplayedImage = ({category, imageId, imageUrl}) => {
+        appDispatch({
+            type: 'UPDATE_DISPLAYED_IMAGE',
+            payload: {
+                imageId,
+                imageUrl,
+                category
+            }
+        });
+    }
+
+    const handleUpdateRunFetching = (isFetchToBeExecuted) => {
+        appDispatch({
+            type: 'UPDATE_RUN_FETCHING',
+            payload: {
+                runFetching: isFetchToBeExecuted
+            }
+        });
+    }
+
     const ctxValue = {
         category: appState.category,
         updateCategory: handleUpdateCategory,
         loadedImages: appState.loadedImages,
         addImage: handleAddImage,
+        displayedImage: appState.displayedImage,
+        updateDisplayedImage: handleDisplayedImage,
+        runFetching: appState.runFetching,
+        updateRunFetching: handleUpdateRunFetching,
     };
 
     return (

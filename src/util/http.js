@@ -22,6 +22,10 @@ export const fetchData = async (setFunc, category) => {
             return res.json();
         })
         .then((data) => {
-            setFunc(data[0]);
+            setFunc({
+                category,
+                imageUrl: data[0].url,
+                imageId: data[0].id,
+            });
         });
 }
