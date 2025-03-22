@@ -6,7 +6,7 @@ import Typography from '@mui/material/Typography';
 
 const MediaCard = ({imageUrl}) => {
     return (
-        <Card sx={{ minWidth: 330, maxWidth: 400 }}>
+        <Card sx={{ minWidth: 320, maxWidth: 400 }}>
             <CardMedia
                 sx={{ height: 300 }}
                 image={imageUrl}

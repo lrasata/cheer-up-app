@@ -26,7 +26,6 @@ export const appReducer = (state, action) => {
         };
     }
     if (action.type === 'UPDATE_DISPLAYED_IMAGE') {
-        console.log(action.payload);
         return {
             ...state,
             category: action.payload.category,

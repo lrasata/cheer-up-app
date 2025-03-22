@@ -11,7 +11,7 @@ const LandingPage = () => {
             <Box paddingBottom={3}>
                 <AppInfoAlert/>
             </Box>
-            <Typography variant="h2" component="h1">Cheer up with a nice animal picture</Typography>
+            <Typography variant="h4" component="h1">Cheer up with a nice animal picture</Typography>
             <Box py={2}>
                 <Question/>
             </Box>

@@ -22,8 +22,8 @@ const SmallMediaCardContainer = () => {
         <>
             {
                 loadedImagesToShow.length > 0 && <Grid container spacing={2}>
-                    {loadedImagesToShow.map((image) => (
-                        <Grid size={{xs: 12, md: 4}} key={image.imageId}>
+                    {loadedImagesToShow.map((image, index) => (
+                        <Grid size={{xs: 12, md: 4}} key={`${image.imageId}-${index}`}>
                             <SmallMediaCard imageUrl={image.imageUrl} callBackFunc={() => handleOnClick(image)} />
                         </Grid>
                     ))}
