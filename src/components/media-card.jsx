@@ -10,11 +10,11 @@ const MediaCard = ({imageUrl}) => {
             <CardMedia
                 sx={{ height: 300 }}
                 image={imageUrl}
-                title="animal picture"
+                alt="this is a picture of an animal"
             />
             <CardContent>
                 <Typography gutterBottom={false} variant="h5" component="div">
-                    Isn't it nice ?
+                    Isn't it nice?
                 </Typography>
             </CardContent>
         </Card>

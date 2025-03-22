@@ -1,12 +1,12 @@
 import {Box, Stack, Typography, useMediaQuery, useTheme} from "@mui/material";
-import {QuestionContext} from "../store/question-context.jsx";
+import {AppContext} from "../store/app-context.jsx";
 import {useContext} from "react";
 import Button from "./button.jsx";
 
 const Question = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const { updateCategory} = useContext(QuestionContext);
+    const { updateCategory} = useContext(AppContext);
 
     const handleClick = (category) => {
         updateCategory(category);

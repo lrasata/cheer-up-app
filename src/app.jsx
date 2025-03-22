@@ -1,6 +1,6 @@
 import './app.css'
 import LandingPage from "./page/landing-page.jsx";
-import QuestionContextProvider from "./store/question-context.jsx";
+import AppContextProvider from "./store/app-context.jsx";
 
 import {createTheme, ThemeProvider} from "@mui/material";
 
@@ -25,7 +25,7 @@ const theme = createTheme({
 
 function App() {
     return <ThemeProvider theme={theme}>
-        <QuestionContextProvider><LandingPage/></QuestionContextProvider>
+        <AppContextProvider><LandingPage/></AppContextProvider>
     </ThemeProvider>;
 }
 
