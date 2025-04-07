@@ -59,7 +59,6 @@ const MediaCardContainer = () => {
                     </Stack>
                 </Box>
             </div>
-
         }
     </>
 }

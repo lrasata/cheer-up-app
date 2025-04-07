@@ -1,4 +1,4 @@
-import {Box, Typography} from "@mui/material";
+import {Typography} from "@mui/material";
 import AppInfoAlert from "../components/app-info-alert.jsx";
 import Question from "../components/question.jsx";
 import MediaCardContainer from "../containers/media-card-container.jsx";
@@ -8,15 +8,10 @@ const LandingPage = () => {
 
     return (
         <>
-            <Box paddingBottom={3}>
-                <AppInfoAlert/>
-            </Box>
+            <AppInfoAlert />
             <Typography variant="h4" component="h1">Cheer up with a nice animal picture</Typography>
-            <Box py={2}>
-                <Question/>
-            </Box>
+            <Question />
             <MediaCardContainer />
-
             <SmallMediaCardContainer />
         </>
     )

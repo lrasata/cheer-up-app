@@ -18,9 +18,7 @@ const Question = () => {
         <Button variant="outlined" fullWidth={isMobile} onClick={() => handleClick('dog')}>I'm a dog person</Button>
     </>
 
-
-
-    return <>
+    return <Box my={2}>
         <Typography variant="body1" color="textPrimary">
             Would you rather prefer cats or dogs ?
         </Typography>
@@ -38,12 +36,8 @@ const Question = () => {
                     {buttons}
                 </Stack>
             </Box>
-
         }
-
-
-
-    </>
+    </Box>
 }
 
 export default Question;
