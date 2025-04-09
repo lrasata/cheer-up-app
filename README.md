@@ -36,3 +36,7 @@ To Visit App:
 
 ## Deployment
 AWS amplify packages has been installed in this project for testing purposes
+
+
+## Future improvements
+- [ ] extend app to be full stack and integrate authenticated user experience so user can save images as favorites
