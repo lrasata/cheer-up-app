@@ -2,7 +2,7 @@
   "name": "cheer-up-app",
   "author": "lrasata",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -16,8 +16,8 @@
     "@mui/icons-material": "^6.4.8",
     "@mui/material": "^6.4.8",
     "aws-amplify": "^6.13.6",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.14.3",
